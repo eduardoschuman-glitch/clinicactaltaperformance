@@ -353,6 +353,17 @@ p:last-child { margin-bottom: 0; }
 .split-copy .lead { margin-bottom: 22px; }
 .split-copy .body p { color: var(--ink-muted); }
 
+/* Sobre nosotros: heading separated so it can sit first on mobile */
+.split--about {
+  grid-template-rows: auto 1fr;
+  align-items: start;
+}
+.split--about .split-head { grid-column: 2; grid-row: 1; max-width: 560px; }
+.split--about .split-head h2 { margin-bottom: 0; }
+.split--about .split-media { grid-column: 1; grid-row: 1 / span 2; align-self: center; }
+.split--about .split-copy { grid-column: 2; grid-row: 2; }
+.split--about .split-copy .lead { margin-top: 26px; }
+
 /* ============================================================
    FILOSOFÍA (centered)
    ============================================================ */
@@ -763,6 +774,9 @@ p:last-child { margin-bottom: 0; }
   .hero-figure { max-width: 460px; margin: 0 auto; width: 100%; }
   .split, .founder-grid, .treat-card, .treat-card.reverse, .location-grid { grid-template-columns: 1fr; }
   .split.reverse .split-media, .treat-card.reverse .treat-media { order: 0; }
+  .split--about { grid-template-rows: none; }
+  .split--about .split-head, .split--about .split-media, .split--about .split-copy { grid-column: 1; grid-row: auto; }
+  .split--about .split-head { max-width: none; }
   .split-copy, .treat-copy, .founder-copy { max-width: none; }
   .dual { grid-template-columns: 1fr; max-width: 460px; }
   .footer-top { grid-template-columns: 1fr; gap: 36px; }
@@ -778,4 +792,6 @@ p:last-child { margin-bottom: 0; }
   .car-btn.prev { left: 12px; } .car-btn.next { right: 12px; }
   .hero-figure .badge { left: 0; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .hero-meta { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .hero-meta .dot { display: none; }
 }
