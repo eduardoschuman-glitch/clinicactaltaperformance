@@ -285,6 +285,8 @@ p:last-child { margin-bottom: 0; }
   max-width: 100%;
 }
 .hero-meta .dot { width: 5px; height:5px; border-radius:50%; background: var(--gold); flex: none; }
+.hero-meta .meta-ico { display: none; }
+.hero-meta span:has(.meta-ico) { display: inline-flex; align-items: center; gap: 9px; }
 
 .hero-figure {
   position: relative;
@@ -794,4 +796,5 @@ p:last-child { margin-bottom: 0; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
   .hero-meta { flex-direction: column; align-items: flex-start; gap: 10px; }
   .hero-meta .dot { display: none; }
+  .hero-meta .meta-ico { display: block; width: 16px; height: 16px; color: var(--gold); flex: none; }
 }
