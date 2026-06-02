@@ -4,6 +4,14 @@
 (function () {
   'use strict';
 
+  /* ---------- Always open at the top / first section ---------- */
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.addEventListener('load', function () {
+    window.scrollTo(0, 0);
+  });
+
   /* ---------- Sticky header ---------- */
   var header = document.getElementById('header');
   function onScroll() {
