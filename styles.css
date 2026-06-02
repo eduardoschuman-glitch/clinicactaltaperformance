@@ -269,7 +269,8 @@ p:last-child { margin-bottom: 0; }
   align-items: center;
   position: relative; z-index: 2;
 }
-.hero-copy { max-width: 620px; }
+.hero-copy { max-width: 620px; min-width: 0; }
+.hero-copy h1, .hero-copy .lead { overflow-wrap: break-word; }
 .hero h1 {
   font-size: clamp(2.9rem, 6.2vw, 5.3rem);
   font-weight: 500;
@@ -278,11 +279,12 @@ p:last-child { margin-bottom: 0; }
 .hero h1 em { font-style: italic; color: var(--gold); }
 .hero .lead { max-width: 520px; margin-bottom: 38px; }
 .hero-meta {
-  display: flex; align-items: center; gap: 26px;
+  display: flex; align-items: center; flex-wrap: wrap; gap: 12px 26px;
   font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
   color: var(--ink-faint); font-weight: 600;
+  max-width: 100%;
 }
-.hero-meta .dot { width: 5px; height:5px; border-radius:50%; background: var(--gold); }
+.hero-meta .dot { width: 5px; height:5px; border-radius:50%; background: var(--gold); flex: none; }
 
 .hero-figure {
   position: relative;
